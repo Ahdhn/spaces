@@ -12,7 +12,7 @@ __global__ void lib_kernel()
 }
 }  // namespace detail
 
-void CUDALib::run()
+void Lib::run()
 {
     detail::lib_kernel<<<1, 1>>>();   
 }

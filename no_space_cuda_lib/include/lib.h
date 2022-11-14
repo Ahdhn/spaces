@@ -2,12 +2,12 @@
 
 #include <stdint.h>
 
-class CUDALib
+class Lib
 {
    public:
-    CUDALib() = default;
+    Lib() = default;
 
     void run();
 
-    ~CUDALib() = default;
+    ~Lib() = default;
 };

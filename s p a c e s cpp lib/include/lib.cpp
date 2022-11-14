@@ -5,7 +5,7 @@
 
 
 
-void CUDALib::run()
+void Lib::run()
 {
     printf("\n I am running\n");
 }

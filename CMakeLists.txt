@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.19 FATAL_ERROR)
 
 #Project name 
-set(project_name "Spaces")#<TODO> change this to the name of your project 
+set(project_name "Spaces")
 project(${project_name} LANGUAGES CXX C CUDA)  
 
 #toggle between building a shared or static library
@@ -15,17 +15,6 @@ endif ()
 
 # Direct all output to /bin directory
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/bin)
-
-
-include(FetchContent)
-# GoogleTest
-set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-FetchContent_Declare(googletest
-    GIT_REPOSITORY https://github.com/google/googletest.git
-    GIT_TAG        eaf9a3fd77869cf95befb87455a2e2a2e85044ff
-)
-FetchContent_MakeAvailable(googletest)
-include(GoogleTest)
 
 
 # Auto-detect GPU architecture
@@ -61,15 +50,8 @@ target_include_directories(developer_flags INTERFACE ${CMAKE_CUDA_TOOLKIT_INCLUD
 
 target_compile_features(developer_flags INTERFACE cxx_std_17)
 
-#OpenMP
-find_package(OpenMP)
-if(OpenMP_CXX_FOUND)
-    target_link_libraries(developer_flags INTERFACE OpenMP::OpenMP_CXX)
-endif()
 
-enable_testing()
-
-add_subdirectory("s p a c e e x e")
-add_subdirectory("s p a c e s l i b cuda")
-add_subdirectory("s p a c e s l i b cpp")
-add_subdirectory("no_space_lib")
+add_subdirectory("s p a c e cuda exe")
+add_subdirectory("s p a c e s cpp lib")
+add_subdirectory("s p a c e s cuda lib")
+add_subdirectory("no_space_cuda_lib")
