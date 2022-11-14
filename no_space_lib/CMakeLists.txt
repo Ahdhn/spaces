@@ -1,7 +1,7 @@
 #CMake minimum requirement 
 cmake_minimum_required(VERSION 3.19 FATAL_ERROR)
 
-set(lib_name "CUDALib")
+set(lib_name "NoSpaceLib")
 
 #GLOB source files 
 file(GLOB_RECURSE src_files ${CMAKE_CURRENT_SOURCE_DIR}/include/*.*)#<TODO> change this to add your files 
@@ -19,4 +19,3 @@ target_include_directories(${lib_name} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/inclu
 target_link_libraries( ${lib_name}
 	PUBLIC $<BUILD_INTERFACE:developer_flags>	
 )
-

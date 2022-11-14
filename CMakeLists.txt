@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.19 FATAL_ERROR)
 
 #Project name 
-set(project_name "CUDATemplate")#<TODO> change this to the name of your project 
+set(project_name "Spaces")#<TODO> change this to the name of your project 
 project(${project_name} LANGUAGES CXX C CUDA)  
 
 #toggle between building a shared or static library
@@ -69,5 +69,6 @@ endif()
 
 enable_testing()
 
-add_subdirectory(CUDALib)
-add_subdirectory(CUDAExec)
+add_subdirectory("s p a c e e x e")
+add_subdirectory("s p a c e s l i b")
+add_subdirectory("no_space_lib")

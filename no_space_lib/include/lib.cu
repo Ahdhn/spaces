@@ -1,7 +1,7 @@
 #include <cuda_runtime.h>
 #include <stdio.h>
 
-#include "CUDALib.h"
+#include "lib.h"
 
 
 
