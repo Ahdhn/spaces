@@ -1,7 +1,7 @@
 #CMake minimum requirement 
 cmake_minimum_required(VERSION 3.19 FATAL_ERROR)
 
-set(lib_name "WithSpaceLib")
+set(lib_name "WithSpaceLibCpp")
 
 #GLOB source files 
 file(GLOB_RECURSE src_files ${CMAKE_CURRENT_SOURCE_DIR}/include/*.*)#<TODO> change this to add your files 

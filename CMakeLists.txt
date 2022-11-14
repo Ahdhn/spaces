@@ -70,5 +70,6 @@ endif()
 enable_testing()
 
 add_subdirectory("s p a c e e x e")
-add_subdirectory("s p a c e s l i b")
+add_subdirectory("s p a c e s l i b cuda")
+add_subdirectory("s p a c e s l i b cpp")
 add_subdirectory("no_space_lib")
